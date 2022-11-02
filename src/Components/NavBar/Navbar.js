@@ -6,7 +6,8 @@ import logo from '../../Components/assets/shared/logo.svg'
 
 
 
-const Navbar = () => {
+const Navbar = (props
+  ) => {
   return (
 
     <nav className={styles.navDesktop}>

@@ -5,7 +5,7 @@ import styles from './home.module.css'
 const Home = () => {
   return (
     <Wrapper >
-      <main className={styles}>
+      <main className={styles.main}>
           <section>
           <div className={styles.text}>
             <header>So, you want to travel to</header>
