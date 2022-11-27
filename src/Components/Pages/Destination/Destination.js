@@ -1,8 +1,9 @@
 import React from "react";
 import styles from "./destination.module.css";
-import data from "../../../data.json";
+// import data from "../../../data.json";
 import Moon from "../../assets/destination/image-moon.png";
-import { Link, Outlet } from "react-router-dom";
+
+
 
 // const pickDestination = data.destinations
 const Destination = () => {
@@ -19,11 +20,7 @@ const Destination = () => {
         </div>
         <aside className={styles.right}>
           <nav>
-            <Link to='/destination' className={styles.navItems}>Moon</Link>
-            <Link to='/destination/mars' className={styles.navItems}>Mars</Link>
-            <Link to='/destination/europa' className={styles.navItems}>Europa</Link>
-            <Link to='/destination/titan' className={styles.navItems}>Titan</Link>
-            
+            <NEW />
           </nav>
           <div className={styles.text}>
             <h1>moon</h1>
@@ -42,7 +39,7 @@ const Destination = () => {
           </div>
         </aside>
       </main>
-      <Outlet />
+    
     </div>
   );
 };

@@ -87,18 +87,19 @@ main {
 }
 
 .bottom{
-    border-top: 1px solid #fff;
-    /* background-color: aqua; */
+    border-top: 1px solid #383B4B;
+        /* background-color: aqua; */
     margin-top: 30px;
     padding: 20px 0;
 }
-.bottom div{
+.bottom{
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: space-around;
 }
 .bottom div span{
+    line-height: 2;
     text-transform: uppercase;
     font-family: 'Barlow Condensed', sans-serif;
     color: #d0d6f9;
