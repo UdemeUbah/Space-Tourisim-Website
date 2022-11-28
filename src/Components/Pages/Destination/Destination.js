@@ -1,45 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./destination.module.css";
-// import data from "../../../data.json";
-import Moon from "../../assets/destination/image-moon.png";
+import data from "../../data.json";
+import Navbar from "../../NavBar/Navbar";
+import DestinationItems from "./DestinationItems";
 
+const DestinationData = data.destinations;
 
+const AllTitles = [...DestinationData.map((data) => data.name)];
 
-// const pickDestination = data.destinations
 const Destination = () => {
+  const [destinations, setDestinations] = useState(DestinationData);
+  const [buttons, setButtons] = useState(AllTitles);
+
+  const filter = (button) => {
+    if (button === 'Moon') {
+      setDestinations(DestinationData[0]);
+      return;
+    }
+    const filteredData = DestinationData.filter(item => item.name === button);
+    setDestinations(filteredData);
+  };
+  //The above function filters through the data gotten from the json file and creates a button component based on the names of each destination group and also sets the destinations based on the filtered data
+
   return (
     <div className={styles.container}>
-          <h3>
-            <span>01</span>pick your destination
-          </h3>
-      <main>
-        <div className={styles.left}>
-          <div className={styles.image}>
-            <img src={Moon} alt="moon" width='100%' />
-          </div>
-        </div>
-        <aside className={styles.right}>
-          <nav>
-            <NEW />
-          </nav>
-          <div className={styles.text}>
-            <h1>moon</h1>
-            <p>See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.</p>
-            <div className={styles.bottom}>
-              <div>
-                <span>avg distance</span>
-                <p>384,400 km</p>
-              </div>
-              <div>
-                <span>est. travel time</span>
-                <p>3 days</p>
-              </div>
-            </div>
-
-          </div>
-        </aside>
-      </main>
-    
+      <Navbar />
+      <h3>
+        <span>01</span>pick your destination
+      </h3>
+      
+      <DestinationItems
+        destination={destinations}
+        button={buttons}
+        btnFilter={filter}
+      />
     </div>
   );
 };

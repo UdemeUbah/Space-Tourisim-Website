@@ -1,10 +1,12 @@
 import React from 'react'
 import Wrapper from '../../Wrapper'
 import styles from './home.module.css'
+import Navbar from '../../NavBar/Navbar'
 
 const Home = () => {
   return (
     <Wrapper >
+      <Navbar />
       <main className={styles.main}>
           <section>
           <div className={styles.text}>
