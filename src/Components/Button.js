@@ -1,14 +1,10 @@
 import React from 'react'
 import styles from './Pages/Destination/destination.module.css'
 
-const Button = ({filter, button}) => {
+const Button = ({title}) => {
   return (
     <div className={styles.buttons}>
-      {
-        button.map((name, index)=>{
-          return <button  type='button' onClick={()=>filter(name)} key={index} className={styles.btn}>{name}</button>
-        })
-      }
+      <button  type='button' className={styles.btn}>{title}</button>    
     </div>
   )
 }

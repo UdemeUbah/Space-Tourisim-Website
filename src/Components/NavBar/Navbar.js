@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import styles from './navbar.module.css'
 import logo from '../../Components/assets/shared/logo.svg'
+import { Link } from 'react-router-dom'
 
 
 
@@ -11,7 +12,7 @@ const Navbar = (props
   return (
 
     <nav className={styles.navDesktop}>
-      <div><img src={logo} alt="logo" /></div>
+      <Link to='/'><img src={logo} alt="logo" /></Link>
       <ul>
         <NavLink to='/' className={styles.navItems}>00 Home</NavLink>
         <NavLink to='/destination' className={styles.navItems}>01 Destination</NavLink>

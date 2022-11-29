@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 .navDesktop {
@@ -10,12 +9,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* height: 70px; */
     width: 100%;
     position: fixed;
     top: 0;
     padding: 30px 40px 0;
     font-family: 'Barlow Condensed', sans-serif;
+    z-index: 4;
 }
 
 ul {
@@ -47,7 +46,8 @@ ul {
     color: rgb(255, 243, 211);
     border-bottom: 2px solid rgb(255, 243, 211);
 }
-.navItems:active{
+.navItems:active,
+.navItems:focus{
     color: rgb(255, 243, 211);
     border-bottom: 2px solid rgb(255, 243, 211);
 }

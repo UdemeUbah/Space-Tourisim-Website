@@ -1,11 +1,18 @@
-import React from 'react';
-import Wrapper from '../../Wrapper'
-import styles from './crew.module.css';
+import React from "react";
+import styles from "./crew.module.css";
+import CrewItems from "./CrewItems";
 
-const Crew = () => {
-  return (
-    <Wrapper>Crew</Wrapper>
-  )
-}
 
-export default Crew
+
+const Destination = () => {
+   return (
+    <div className={styles.container}>
+      <h3>
+        <span>02</span>Meet your Crew
+      </h3>
+            <CrewItems  />
+    </div>
+  );
+};
+
+export default Destination;
