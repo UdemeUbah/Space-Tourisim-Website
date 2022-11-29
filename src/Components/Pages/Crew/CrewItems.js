@@ -27,7 +27,7 @@ const CrewItems = () => {
               <p>{bio}</p>
             </div>
             <nav>
-              {people.map(index => {
+              {people.map((item, index) => {
                 return (
                   <div className={crewStyles.buttons}>
                     <button

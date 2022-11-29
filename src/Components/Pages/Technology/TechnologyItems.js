@@ -7,7 +7,7 @@ import data from "../../data.json";
 const technology = data.technology;
 const TechnologyItems = () => {
   const [spaceLaunch] = useState(technology);
-  const [value, setValue] = useState(2);
+  const [value, setValue] = useState(0);
 
   const { name, images, description} = spaceLaunch[value];
   //destructure the people array and pick out these properties from each index as specified in people[value]
